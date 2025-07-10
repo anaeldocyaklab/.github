@@ -1,0 +1,72 @@
+name: Feature Request
+description: Suggest an idea or new feature for the project
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature! This will help us improve the project and prioritize our development roadmap.
+
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: Problem or Need
+      description: What problem does this feature solve? What need does it address?
+      placeholder: Describe the problem or need that this feature would address...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: What would you like to see implemented?
+      placeholder: Describe your proposed solution in detail...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Have you considered any alternative solutions or approaches?
+      placeholder: Describe any alternative solutions you've thought about...
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this feature?
+      options:
+        - Low - Nice to have
+        - Medium - Would improve workflow
+        - High - Critical for project success
+      default: 1
+    validations:
+      required: true
+
+  - type: dropdown
+    id: effort
+    attributes:
+      label: Estimated Effort
+      description: How complex do you think this feature would be to implement?
+      options:
+        - Small - A few hours
+        - Medium - A few days
+        - Large - A week or more
+        - Unknown - Needs investigation
+      default: 3
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other context, mockups, screenshots, or examples that would help?
+      placeholder: Add any additional context, links, or resources...
+    validations:
+      required: false

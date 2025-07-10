@@ -1,0 +1,58 @@
+name: Task
+description: Create a new task or work item.
+title: "[Task(research)]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for submitting a new task! Please provide as much detail as possible to help us plan and prioritize.
+  - type: textarea
+    id: task-details
+    attributes:
+      label: Task Description
+      description: What needs to be done? Please describe the task clearly and concisely.
+      placeholder: Describe the task or work to be completed.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What are the requirements for this task to be considered done?
+      placeholder: List the conditions, requirements, or outcomes that must be met.
+    validations:
+      required: false
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How urgent/important is this task?
+      options:
+        - Low
+        - Medium
+        - High
+      default: 1
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area/Component
+      description: What area or component does this task relate to?
+      options:
+        - Frontend
+        - Backend
+        - DevOps
+        - Documentation
+        - Other
+      default: 0
+    validations:
+      required: false
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: Additional Notes/Resources
+      description: Any links, references, or extra details?
+      placeholder: Add extra details, context, or resources here.
+    validations:
+      required: false
